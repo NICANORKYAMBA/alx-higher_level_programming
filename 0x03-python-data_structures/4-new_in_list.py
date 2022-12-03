@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 def new_in_list(my_list, idx, element):
 
-    newlist = my_list[:]
-    n = len(my_list)
+    if idx < 0 or idx > (len(my_list) - 1):
+        return (my_list)
 
-    for number in my_list:
-        if idx < 0:
-            return newlist
-        elif idx > n:
-            return newlist
-        else:
-            newlist[idx] = element
-            return newlist
+    copy = [x for x in my_list]
+    copy[idx] = element
+    return (copy)
