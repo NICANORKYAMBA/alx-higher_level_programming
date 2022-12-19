@@ -39,7 +39,7 @@ nb_print: 5
 guillaume@ubuntu:~/0x05$ 
 ```
 
-    * File: 0-safe_print_list.py
+    * 0-safe_print_list.py
    
 ### 1. Safe printing of an integers list
 
@@ -82,7 +82,7 @@ School is not an integer
 guillaume@ubuntu:~/0x05$ 
 ```
 
-    * File: 1-safe_print_integer.py
+    * 1-safe_print_integer.py
    
 ### 2. Print and count integers
 
@@ -130,7 +130,7 @@ nb_print: 5
 IndexError: list index out of range
 guillaume@ubuntu:~/0x05$ 
 ```
-    * File: 2-safe_print_list_integers.py
+    * 2-safe_print_list_integers.py
    
 ### 3. Integers division with debug
 
@@ -167,7 +167,7 @@ Inside result: None
 guillaume@ubuntu:~/0x05$ 
 ```
 
-    * File: 3-safe_print_division.py
+    * 3-safe_print_division.py
    
 ### 4. Divide a list
 
@@ -213,7 +213,7 @@ out of range
 [5.0, 0, 0, 2.0, 0]
 guillaume@ubuntu:~/0x05$ 
 ```
-    * File: 4-list_division.py
+    * 4-list_division.py
    
 ### 5. Raise exception
 
@@ -236,7 +236,7 @@ guillaume@ubuntu:~/0x05$ ./5-main.py
 Exception raised
 guillaume@ubuntu:~/0x05$ 
 ```
-    * File: 5-raise_exception.py
+    * 5-raise_exception.py
    
 ## 6. Raise a message
 
@@ -259,4 +259,4 @@ guillaume@ubuntu:~/0x05$ ./6-main.py
 C is fun
 guillaume@ubuntu:~/0x05$ 
 ```
-    * File: 6-raise_exception_msg.py
+    * 6-raise_exception_msg.py
