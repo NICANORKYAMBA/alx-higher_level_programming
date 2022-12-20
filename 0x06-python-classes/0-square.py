@@ -1,4 +1,3 @@
-    """Define an empty square class
-    """
+""" Define an empty square class """
 class Square:
     pass
