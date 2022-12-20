@@ -2,11 +2,11 @@
 """ writes a class that defines a square
     with a private instance attribute size
     Raises:
-        TypeError: _size must be an integer_
-        ValueError: _size should always be greater or equal to zero_
+        TypeError: size must be an integer
+        ValueError: size should always be greater or equal to zero
 
     Returns:
-        _area_: _area of the square_
+        Area: area of the square
     """
 
 
