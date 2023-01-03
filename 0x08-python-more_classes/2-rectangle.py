@@ -22,7 +22,7 @@ class Rectangle:
             height(int): new value of height. Defaults to 0.
         """
         self.height = height
-        self.__width = width
+        self.width = width
 
     @property
     def height(self):
