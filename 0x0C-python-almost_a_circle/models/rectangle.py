@@ -11,9 +11,9 @@ class Rectangle(Base):
         Args:
             width ([int]): [width of rectangle]
             height ([int]): [heigth of rectangle]
-            x (int, optional): [x coordinates of new rectangle]. Defaults to 0.
-            y (int, optional): [y coordinates of new rectangle]. Defaults to 0.
-            id ([int], optional): [identity of new rectangle]. Defaults to None.
+            x (int): [x coordinates of new rectangle]. Defaults to 0.
+            y (int): [y coordinates of new rectangle]. Defaults to 0.
+            id ([int]): [identity of new rectangle]. Defaults to None.
         """
         self.width = width
         self.height = height
@@ -40,22 +40,22 @@ class Rectangle(Base):
     def height(self, value):
         """sets the new value for height"""
         self.__height = value
-        
+
     @property
     def x(self):
         """returns x value"""
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         """sets the new value for x"""
         self.__x = value
-        
+
     @property
     def y(self):
         """returns y value"""
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         """sets the new value for y"""
