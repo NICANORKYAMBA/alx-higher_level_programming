@@ -15,8 +15,20 @@ class Square(Rectangle):
             id ([int], optional): [identity of the square]. Defaults to None.
         """
         super().__init__(size, size, x, y, id)
-        """Return the print() and str() representation of the Square"""
+
+    @property
+    def size(self):
+        """returns the size of the square"""
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        """sets the size of the square"""
+        self.width = value
+        self.height = value
+
     def __str__(self):
+        """Return the print() and str() representation of the Square"""
         return '[square] ({}) {}/{} - {}'.format(self.id, self.x,
                                                  self.y,
                                                  self.height)
