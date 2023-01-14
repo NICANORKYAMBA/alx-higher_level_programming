@@ -33,6 +33,11 @@ class Square(Rectangle):
                                                  self.y,
                                                  self.height)
 
+        def to_dictionary(self):
+            """return a dictionary representation of square"""
+            return {'id': self.id, 'size': self.width,
+                    'x': self.x, 'y': self.y}
+
     def update(self, *args, **kwargs):
         """Update the square"""
         if args and len(args) != 0:
