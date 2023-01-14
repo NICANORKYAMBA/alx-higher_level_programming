@@ -96,6 +96,11 @@ class Rectangle(Base):
                                                  self.y, self.width,
                                                  self.height)
 
+    def to_dictionary(self):
+        """returns a dictionary representation of the Rectangle"""
+        return {'id': self.id, 'width': self.width,
+                'height': self.height, 'x': self.x, 'y': self.y}
+
     def update(self, *args, **kwargs):
         """Updates the Rectangle and assigns argument to attribute"""
         if args and len(args) != 0:
