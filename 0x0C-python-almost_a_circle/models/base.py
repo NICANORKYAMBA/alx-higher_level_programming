@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a base model class."""
 import json
+from os import path
 
 
 class Base:
@@ -38,7 +39,7 @@ class Base:
         """writes the JSON string representation of list_objs to a file"""
 
         filename = cls.__name__ + ".json"
-        with open(filename, 'w') as f:
+        with open(filename, 'w', encoding="utf-8") as f:
             if list_objs is None:
                 f.write("[]")
             else:
@@ -71,3 +72,21 @@ class Base:
                 newclass = cls(1)
         newclass.update(**dictionary)
         return newclass
+
+    @classmethod
+    def load_from_file(cls):
+        """return a list of classes instantiated from a file of JSON strings.
+
+        reads from `<cls.__name__>.json`.
+
+        returns:
+            If the file does not exist - an empty list.
+            Otherwise - a list of instantiated classes.
+        """
+        filename = str(cls.__name__) + ".json"
+        if path.exists(filename) is True:
+            with open(filename, "r", encoding="utf-8") as f:
+                list_objects = Base.from_json_string(f.read())
+                return [cls.create(**dicts) for dicts in list_objects]
+        else:
+            return []
