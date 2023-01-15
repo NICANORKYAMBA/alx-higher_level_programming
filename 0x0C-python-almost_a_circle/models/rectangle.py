@@ -29,10 +29,10 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """sets new value of width"""
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("width must be an integer")
-        elif value < 0:
-            raise ValueError("width must be >= 0")
+        elif value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property
@@ -45,8 +45,8 @@ class Rectangle(Base):
         """sets the new value for height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
-        elif value < 0:
-            raise ValueError("height must be >= 0")
+        elif value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property
@@ -57,7 +57,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, value):
         """sets the new value for x"""
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("x must be an integer")
         elif value < 0:
             raise ValueError("x must be >= 0")
@@ -92,7 +92,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return the print() and str() representation of the Rectangle"""
-        return '[Rectangle] ({}) {}/{} {}/{}'.format(self.id, self.x,
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x,
                                                  self.y, self.width,
                                                  self.height)
 
@@ -122,16 +122,16 @@ class Rectangle(Base):
                 a += 1
         elif kwargs and len(kwargs) != 0:
             for key, val in kwargs.items():
-                if key == 'id':
+                if key == "id":
                     if val is None:
                         self.__init__(self.width, self.height, self.x, self.y)
                     else:
                         self.id = val
-                elif key == 'width':
+                elif key == "width":
                     self.width = val
-                elif key == 'height':
+                elif key == "height":
                     self.height = val
-                elif key == 'x':
+                elif key == "x":
                     self.x = val
-                elif key == 'y':
+                elif key == "y":
                     self.y = val
