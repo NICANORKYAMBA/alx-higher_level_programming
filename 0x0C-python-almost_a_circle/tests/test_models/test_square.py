@@ -153,11 +153,11 @@ class TestSquare_size(unittest.TestCase):
 
     # Test size values
     def test_negative_size(self):
-        with self.assertRaisesRegex(ValueError, "width must be >= 0"):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(-1, 2)
 
     def test_zero_size(self):
-        with self.assertRaisesRegex(ValueError, "width must be >= 0"):
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
             Square(0, 2)
 
 
