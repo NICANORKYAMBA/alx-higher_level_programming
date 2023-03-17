@@ -31,7 +31,3 @@ if __name__ == '__main__':
     # Display the results
     for row in rows:
         print(row)
-
-    # Close the cursor and database connection
-    cursor.close()
-    db.close()
