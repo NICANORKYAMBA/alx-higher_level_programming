@@ -51,7 +51,5 @@ if __name__ == "__main__":
     """
     Display results
     """
-    for result in results:
-        if (result[4] == sys.argv[4]):
-            print(result[2], end=", ")
-    print()
+    print(", ".join(
+        [result[2] for result in results if result[4] == sys.argv[4]]))
