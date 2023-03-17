@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
 Lists all states from the database hbtn_0e_0_usa.
-Usage: ./0-select_states.py <mysql username> \
-                             <mysql password> \
+Usage: ./0-select_states.py <mysql username>
+                             <mysql password>
                              <database name>
 """
 
@@ -22,8 +22,11 @@ if __name__ == '__main__':
     Connect to the MySQL server
     """
     db = MySQLdb.connect(
+            host='localhost',
+            port=3305,
             user=mysql_user,
-            passwd=mysql_password, db=db_name)
+            passwd=mysql_password,
+            db=db_name)
 
     """
     Create a cursor object to execute queries
@@ -38,10 +41,10 @@ if __name__ == '__main__':
     """
     Fetch all the rows from the result set
     """
-    rows = cursor.fetchall()
+    results = cursor.fetchall()
 
     """
     Display the results
     """
-    for row in rows:
-        print(row)
+    for result in results:
+        print(result)
