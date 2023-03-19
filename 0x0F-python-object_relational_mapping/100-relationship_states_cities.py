@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """
 Adds the State object “California” with the City “San Francisco”
 to the database hbtn_0e_100_usa
