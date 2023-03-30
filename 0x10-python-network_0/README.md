@@ -23,7 +23,12 @@
 
 <h3>Reading Material</h3>
 <ul>
-<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">HTTP Cookies</a>
+<p>
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">
+HTTP Cookies</a>
+</p>
+<p>
 <a href="https://www3.ntu.edu.sg/home/ehchua/programming/webprogramming/HTTP_Basics.html">
 HTTP (HyperText Transfer Protocol)</a>
+</p>
 </ul>
