@@ -12,4 +12,4 @@ if __name__ == "__main__":
     with urllib.request.urlopen(url) as response:
         headers = response.headers
 
-        print("{}".format(headers['X-Request-Id']))
+        print("{}".format(headers.get('X-Request-Id')))
