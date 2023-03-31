@@ -14,6 +14,6 @@ if __name__ == "__main__":
                 }
 
         print("Body response:")
-        print("\t-type: {}".format(response_body['type']))
-        print("\t-content: {}".format(response_body['content']))
-        print("\t-utf8 content: {}".format(response_body['utf8 content']))
+        print("\t- type: {}".format(response_body['type']))
+        print("\t- content: {}".format(response_body['content']))
+        print("\t- utf8 content: {}".format(response_body['utf8 content']))
