@@ -1,11 +1,12 @@
 #!/usr/bin/node
+
 const request = require('request');
+const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
 
 // Make the API request and get the response
-const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
-request(apiUrl, function (error, response, body) {
+request(apiUrl, (error, response, body) => {
   if (error) {
-    console.error(error);
+    console.log(error);
     return;
   }
 
@@ -16,7 +17,7 @@ request(apiUrl, function (error, response, body) {
   const completedTasksByUser = {};
 
   // Loop through the tasks and count the completed tasks for each user
-  tasks.forEach(function (task) {
+  tasks.forEach(task => {
     if (task.completed) {
       const userId = task.userId;
       if (completedTasksByUser[userId]) {
@@ -27,6 +28,6 @@ request(apiUrl, function (error, response, body) {
     }
   });
 
-  // Print out the completed tasks for each user
+  // Print out the completed tasks for each user in the desired format
   console.log(completedTasksByUser);
 });
