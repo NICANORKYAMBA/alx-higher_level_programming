@@ -24,5 +24,5 @@ request(apiUrl, (error, response, body) => {
     }
   });
 
-  console.log(completedTasksByUser, null, 2);
+  console.log(completedTasksByUser);
 });
