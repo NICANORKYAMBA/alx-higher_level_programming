@@ -1,11 +1,11 @@
 #!/usr/bin/node
 
 const request = require('request');
-const apiUrl = 'https://jsonplaceholder.typicode.com/todos';
+const apiUrl = process.argv[2];
 
 request(apiUrl, (error, response, body) => {
   if (error) {
-    console.log(error);
+    console.error(error);
     return;
   }
 
@@ -24,5 +24,5 @@ request(apiUrl, (error, response, body) => {
     }
   });
 
-  console.log(JSON.stringify(completedTasksByUser, null, 2));
+  console.log(completedTasksByUser, null, 2);
 });
